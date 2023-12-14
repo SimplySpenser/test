@@ -4,4 +4,6 @@
     $(function(){
       $("#header").load("header.html"); 
 	  $("#footer").load("footer.html"); 
+	  $("#sections_header").load("sections_header.html"); 
+	  $("#sections_footer").load("sections_footer.html"); 
     });
