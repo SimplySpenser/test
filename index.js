@@ -30,8 +30,3 @@ window.onload = () => {
     };
   }}
 };
-$('a.reg_btn').click(function(e) {
-    e.preventDefault();
-    window.open('documents/regulations/Ustav 2023.pdf');
-
-});
