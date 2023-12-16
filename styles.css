@@ -142,7 +142,7 @@ transition: transform .5s, filter .5s;
 	color: #362491;
 }
 .fresh_news img{
-	width: 40em;
+	width: 100%;
 	height: 24em;
 	display: block;
     margin-left: auto;
@@ -305,7 +305,7 @@ footer h4{
 }
 .reg_btn{
 	width: 9em;
-    height: 3em;
+    height: 5em;
 	font-size: 18px;
 	color: white;
 	background-color: #3687c8;
@@ -813,7 +813,9 @@ footer h4{
 	margin: 1em;
 }
 .news_segment img{
-	border: 1px solid blue;
+	border: 1px solid #6e8ea8;
+	max-width: 40%;
+    max-height: 50em;
 }
 .news_div{
     display: flex;
@@ -823,8 +825,17 @@ footer h4{
     font-size: 24px;	
 	font-family: Baskerville;
 }
-
-
+.news_images_row{
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+    margin: 2em;
+}
+.news_images_row img{
+	border: 1px solid #6e8ea8;
+    max-height: 40em;
+	max-width: 90%;
+}
 
 
 
