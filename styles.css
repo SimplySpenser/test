@@ -110,7 +110,6 @@ transition: transform .5s, filter .5s;
 	box-shadow: 0px 0px 65px 1em #0b4370;
 	width: 80%;
 	margin: 3em auto;
-	margin-top: 3em;
 	border-radius: 6px;
 }
 .school_news h2{
@@ -118,8 +117,7 @@ transition: transform .5s, filter .5s;
 	padding-top: 0.5em;
 	font-size: 32px;
 	color: #362491;
-	font-family: NimbusSanLCY;
-	
+	font-family: NimbusSanLCY;	
 }
 .news_wrap{
 	width: 80%;
@@ -151,6 +149,7 @@ transition: transform .5s, filter .5s;
     box-shadow: 10px 5px 20px 6px #0b4370;
 	margin-top: 1.8em;
 	transition: transform .5s, filter .5s;
+	object-fit: cover;
 }
 .fresh_news img:hover {
     transform: scale(1.02);
@@ -165,11 +164,25 @@ transition: transform .5s, filter .5s;
 	font-weight: bold;
 	font-size: 20px;
 	color: black;
-	margin-left: 75%;
+	margin-left: 70%;
 	margin-bottom: 1em;
-	transition: transform .5s, filter .5s;
+	transition: all .5s ease;
 }
 .readmore:hover{
+	color: #1076c9;
+}
+.link_to_news_archive{
+	text-align: center;
+	margin: 1.5em 0;
+}
+.link_to_news_archive a{	
+	font-weight: bold;
+	font-size: 22px;
+	text-decoration: none;
+	color: black;
+	transition: all .5s ease;
+}
+.link_to_news_archive a:hover{
 	color: #1076c9;
 }
 /*================Footer====================*/
@@ -209,7 +222,7 @@ footer h4{
     align-items: center;	
 }
 .footer_logo{
-	width: 14em;
+	width: 12em;
 }
 .f_another_info{
 	text-align: center;
@@ -808,14 +821,31 @@ footer h4{
 	margin-bottom: 0.6em;
 }
 /*================news_segments====================*/
+.news_segment_wrapper{
+	border: 4px solid #1076c9;
+	box-shadow: 0px 0px 65px 1em #0b4370;
+	width: 80%;
+	margin: 3em auto;
+	border-radius: 6px;
+	transition: transform .5s, filter .5s;
+}
+.news_segment_image{
+	border: 1px solid #1076c9;
+    box-shadow: 1px 1px 6px 2px #0b4370;
+	max-width: 40%;
+    max-height: 50em;
+	transition: transform .5s, filter .5s;
+}
+.news_segment_image:hover{
+	transform: scale(1.05);	
+	cursor: pointer;
+}
+.news_segment_image:fullscreen{
+	object-fit: contain;
+}
 .news_segment{
 	display: flex;
 	margin: 1em;
-}
-.news_segment img{
-	border: 1px solid #6e8ea8;
-	max-width: 40%;
-    max-height: 50em;
 }
 .news_div{
     display: flex;
@@ -836,6 +866,7 @@ footer h4{
     max-height: 40em;
 	max-width: 90%;
 }
+
 
 
 
