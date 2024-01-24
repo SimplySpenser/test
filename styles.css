@@ -185,6 +185,16 @@ transition: transform .5s, filter .5s;
 .link_to_news_archive a:hover{
 	color: #1076c9;
 }
+@media (max-width: 900px) {
+    .readmore{
+		margin-left: 50%;
+		font-size: medium;
+	}
+	.school_news h2{
+		font-size: larger;
+	}
+}
+
 /*================Footer====================*/
 footer{
 	background-color: #333333;
@@ -276,16 +286,19 @@ footer h4{
 	justify-content: space-around;
 	margin: 1em 2em 4em;
 	flex-wrap: wrap;
+	width: 80%;
+    margin: 3em auto;
 }
 .employee_card{
 	display: flex;
 	flex-direction: column;
-	background-color: blue;
+	background-color: #6988e6;
 	color: white;
 	text-align: center;
 	box-shadow: 10px 5px 20px 6px #0b4370;
 	margin-bottom: 2em;
 	padding-bottom: 1em;
+	width: 26%;
 }
 .employee_card h3{
 	display: flex;
@@ -294,8 +307,9 @@ footer h4{
 	height: 3em;
 }
 .employee_card img{
-	max-width: 30em;
-	height: auto;
+    max-width: 17em;
+    height: auto;
+    margin: 1em auto;
 }
 /*================founder_info====================*/
 
@@ -647,9 +661,7 @@ footer h4{
 /*================teachers_works====================*/
 
 /*================school_history====================*/
-#history_h3{
-	
-}
+
 .history_container{
 	display: flex;
     justify-content: center;
@@ -658,11 +670,12 @@ footer h4{
     padding: 2em;	
 	font-family: TypeWriterRussian;
 	font-size: 18px;
+	width: 80%;
+    margin: 3em auto;
 }
 .sh_12{
-	height: 17em;
-	width: 47em;
-	margin-left: 29%;
+	width: 40em;
+	margin: 0 auto;
 }
 .history{
 	display: flex;
@@ -672,23 +685,21 @@ footer h4{
 	display: flex;
     align-items: center;
 	margin: 0 1em;
+	font-size: 20px;
 }
 .history img{
-	border: 2px solid #8588bfc2;
-	height: 26em;
+	border: 2px solid #97abe5;
+	max-height: 26em;
 }
 .image_row{
-	height: 26em;
+	max-height: 20em;
 	display: flex;
 	justify-content: space-around;
 	list-style: none;
-	margin: 2em;	
+	margin: 1.5em;	
 }
 .image_row img{
 	border: 2px solid #8588bfc2;	
-}
-#sh_imagerow, #sh_imagerow1, #sh_imagerow2, #sh_imagerow3, #sh_imagerow4, #sh_imagerow5{
-
 }
 
 /*================our_school_graduates====================*/
