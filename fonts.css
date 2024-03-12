@@ -57,14 +57,6 @@
     src: url("fonts/JakobXTT.ttf");
 }
  @font-face {
-    font-family: "LazurskiCTT";
-    src: url("fonts/LazurskiCTT.ttf");
-}
- @font-face {
-    font-family: "Mon University";
-    src: url("fonts/Mon University.ttf");
-}
- @font-face {
     font-family: "NimbusSanLCY";
     src: url("fonts/NimbusSanLCY.ttf");
 	font-weight: bold;

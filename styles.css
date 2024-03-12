@@ -134,6 +134,9 @@ transition: transform .5s, filter .5s;
 }
 .fresh_news{
     flex-basis: 45%;
+	display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 	padding-bottom: 1.2em;
 	max-width: 40em;
 }
@@ -206,7 +209,7 @@ footer{
 }
 footer h4{
 	text-align: center;
-	padding: 0.8em 0;
+	padding: 1em 0;
 	font-family: AvanteTck;
 	font-size: 18px;
 }
@@ -266,6 +269,7 @@ footer h4{
 .file_container object{
 	width: 70%;
     height: 800px;
+	margin: 2em;
 }
 
 /*================admission_branches====================*/
@@ -284,6 +288,8 @@ footer h4{
 #employee_header{
 	text-align: center;
     margin: 1em;
+	color: #0202ff;
+	font-family: Futurica;
 }
 .emloyee_wrap{
 	display:flex;
@@ -292,6 +298,7 @@ footer h4{
 	flex-wrap: wrap;
 	width: 80%;
     margin: 3em auto;
+	list-style: none;
 }
 .employee_card{
 	display: flex;
@@ -317,6 +324,11 @@ footer h4{
     max-width: 17em;
     height: auto;
     margin: 1em auto;
+}
+#button_managers{
+	display: flex;
+    justify-content: center;
+	margin: 1.5em;
 }
 /*================founder_info====================*/
 
@@ -668,6 +680,18 @@ footer h4{
 /*================teachers_works====================*/
 
 /*================school_history====================*/
+.school_history_container{
+    width: 80%;
+    margin: 3em auto;
+	text-indent: 2em;
+}
+.school_history_container p{
+	font-family: CourierCondensed;
+	font-size: 18px;
+	margin: 1em 0;
+}
+
+/*================school_today_tomorrow====================*/
 
 .history_container{
 	display: flex;
@@ -748,13 +772,24 @@ footer h4{
 	background: none;
 	opacity: 0;
 }
-.os_section img:hover {
+.school_graduates_img:hover {
     transform: scale(1.1);
 	position: relative;
     z-index: 2;
 }
+.school_graduates_img:fullscreen{
+	object-fit: contain;
+}
 /*================directors====================*/
-
+.directors_card{
+	width: 48%;
+}
+.directors_card img{
+	width: 100%;
+	margin: 1em 0;
+	border: 4px solid #1076c9;
+	box-shadow: 10px 5px 20px 6px #0b4370;
+}
 /*================contacts====================*/
 .contacts_wrap{
 	display: flex;
@@ -817,7 +852,7 @@ footer h4{
 	margin: 1em;
 }
 .graduates_btn{
-	background-color: blue;
+	background-color: #2727f0;
     color: white;
     width: 30em;
     height: 2em;
@@ -826,7 +861,7 @@ footer h4{
 	transition: background-color 0.5s ease;
 }
 .graduates_btn:hover{
-	background-color: purple;
+	background-color: #6e6ef2;
 }
 .graduates_gallery_wrap{
 	display: flex;
@@ -899,11 +934,15 @@ footer h4{
     max-height: 30em;
 	max-width: 90%;
 }
+/*================managers====================*/
+
 /*================personnel====================*/
 #personnel_header{
 	text-align: center;
     margin: 1em;
 	font-size: 28px;
+	color: #0f0fe8;
+	font-family: Futurica;
 }
 .personnel_wrap{
 	display: flex;
@@ -912,6 +951,7 @@ footer h4{
     align-items: center;
 	margin: 1em;
 	line-height: 1.5;
+	color: #1111ce;
 }
 .personnel_wrap img{
 	max-width: 80em;
