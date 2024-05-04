@@ -288,8 +288,11 @@ footer h4{
 #employee_header{
 	text-align: center;
     margin: 1em;
-	color: #0202ff;
+	color: #6262eec9;
 	font-family: Futurica;
+}
+@media (min-width: 2100px) {
+	font-size: 24px;
 }
 .emloyee_wrap{
 	display:flex;
@@ -342,7 +345,7 @@ footer h4{
 .reg_wrap{
 	display: flex;
 	justify-content: space-around;
-    margin: 2em;
+    margin: 8em;
     flex-wrap: wrap;
 	list-style: none
 }
@@ -685,6 +688,11 @@ footer h4{
     margin: 3em auto;
 	text-indent: 2em;
 }
+@media (min-width: 2100px){
+.school_history_container p{
+    font-size: 22px;
+}
+}
 .school_history_container p{
 	font-family: CourierCondensed;
 	font-size: 18px;
@@ -804,14 +812,13 @@ footer h4{
     border: 1px solid #3687c8;
 	border-radius: 5px;
     padding: 1em;
+	background-color: #bdbbf04a;
 }
 .contacts div{
 	display: flex;
 	justify-content: center;
 	margin-bottom: 1em;
 }
-.contacts h3{
-
 }
 .contacts p{
 	margin-top: 1em;
