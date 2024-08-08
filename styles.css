@@ -687,6 +687,7 @@ footer h4{
     width: 80%;
     margin: 3em auto;
 	text-indent: 2em;
+	text-align: justify;
 }
 @media (min-width: 2100px){
 .school_history_container p{
