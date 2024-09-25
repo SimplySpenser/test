@@ -106,6 +106,43 @@ transition: transform .5s, filter .5s;
 .nav__menu .dropdown .dropdown:hover>a:after{content:"\f104"}
 .nav__menu .dropdown .dropdown:hover>ul{position:absolute;top:0;right:calc(100% - 17px);left:auto;opacity:1;visibility:visible}
 .nav__menu .dropdown .dropdown ul{position:absolute;top:0;right:calc(100% - 17px);left:auto;opacity:0;visibility:hidden;-webkit-transition:all .4s ease-in-out;transition:all .4s ease-in-out}}
+
+/*================Poster====================*/
+.poster{
+	border: 4px solid #1076c9;
+	box-shadow: 0px 0px 65px 1em #0b4370;
+	width: 80%;
+	margin: 3em auto;
+	border-radius: 6px;
+}
+.poster h2{
+	text-align: center;
+	padding-top: 0.5em;
+	font-size: 3.2em;
+	color: #362491;
+	font-family: NimbusSanLCY;	
+}
+.poster_row{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	flex-wrap: wrap;
+	padding: 0.5em 0.5em 2em;
+}
+.poster_row_image{
+	height: 38em;
+	display: block;
+    margin-left: auto;
+    margin-right: auto;
+	border: 1px solid #1076c9;
+    box-shadow: 10px 5px 20px 6px #0b4370;
+	margin-top: 1.8em;
+	transition: transform .5s, filter .5s;
+	object-fit: cover;
+}
+.poster_row_image:hover {
+    transform: scale(1.02);
+}
 /*================News====================*/
 .school_news{
 	border: 4px solid #1076c9;
@@ -117,7 +154,14 @@ transition: transform .5s, filter .5s;
 .school_news h2{
 	text-align: center;
 	padding-top: 0.5em;
-	font-size: 32px;
+	font-size: 3.2em;
+	color: #362491;
+	font-family: NimbusSanLCY;	
+}
+.school_news h3{
+	text-align: center;
+	padding: 0.5em;
+	font-size: 2em;
 	color: #362491;
 	font-family: NimbusSanLCY;	
 }
@@ -153,7 +197,7 @@ transition: transform .5s, filter .5s;
     margin-right: auto;
 	border: 1px solid #1076c9;
     box-shadow: 10px 5px 20px 6px #0b4370;
-	margin-top: 1.8em;
+	margin: 1.8em 0 1em;
 	transition: transform .5s, filter .5s;
 	object-fit: cover;
 }
@@ -732,16 +776,21 @@ footer h4{
 	max-height: 26em;
 }
 .image_row{
-	max-height: 20em;
 	display: flex;
 	justify-content: space-around;
 	list-style: none;
-	margin: 1.5em;	
+	margin: 1.5em;
+        max-height: 50em;	
 }
 .image_row img{
-	border: 2px solid #8588bfc2;	
+    width: 20%;
+    flex: 1;
+    margin: 1em;
+    border: 2px solid #8588bfc2;	
 }
-
+#wider_image{
+width: 56em;
+}
 /*================our_school_graduates====================*/
 .os_graduates{
     display: flex;
