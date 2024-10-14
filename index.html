@@ -10,63 +10,91 @@
 <link rel="stylesheet" type="text/css" media="all" href="fonts.css">	
 <link rel="stylesheet" href="fontawesome-free-6.2.1-web/css/all.min.css">	
 <link rel="icon" type="image/x-icon" href="images/favicon.ico">
-<style>.nav__container{-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-direction:column;flex-direction:column;-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between;-webkit-box-align:stretch;-ms-flex-align:stretch;align-items:stretch;padding:20px;position:relative;z-index:5;}
-.nav__mobile .nav__btn{display:block}
-.nav__mobile{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between;-webkit-box-align:center;-ms-flex-align:center;align-items:center}
-.nav__logo{font-size:1.4rem;font-weight:700;color:#555}
-.nav__menu{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-direction:column;flex-direction:column;overflow:hidden}
-.showing{max-height:37rem;-webkit-transition:all .5s;transition:all .5s}
-.nav__menu{height:3em;}
-.nav__menu li{list-style:none;position:relative;white-space:nowrap;padding:1rem 0 0}
-.nav__menu li a{display:block;font-size:1rem;color:#222;text-decoration:none}
-.nav-toggle{display:block;background-color:transparent;width:40px;cursor:pointer;padding:4px}
-.nav-toggle span{position:relative;display:block;height:4px;border-radius:35px;width:100%;margin-top:0;background-color:#000;-webkit-transition:all .25s;transition:all .25s}
-.nav-toggle span.mrg{margin-top:5px}
-.nav-toggle.open span:first-child{-webkit-transform:rotate(45deg) translate(6.2px,6.2px);transform:rotate(45deg) translate(6.2px,6.2px)}
-.nav-toggle.open span:nth-child(2){width:0;opacity:0}
-.nav-toggle.open span:last-child{-webkit-transform:rotate(-45deg) translate(6.2px,-6.2px);transform:rotate(-45deg) translate(6.2px,-6.2px)}
-.nav__menu .dropdown ul{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-direction:column;flex-direction:column;position:static;padding:0;max-height:0;overflow:hidden;-webkit-transition:all .4s;transition:all .4s}
-.nav__menu .dropdown ul.show{max-height:20rem;-webkit-transition:all .4s;transition:all .4s}
-.nav__menu .dropdown li a{display:block;font-size:.875rem;color:#222;text-decoration:none}
-.nav__menu li a:hover{color:#0062a3}
-.nav__menu .dropdown>a:after{content:"\f107";font-family:Font Awesome\ 5 Free;font-weight:900;font-size:.875rem;padding-left:5px;color:#7e7e7e}
-.nav__menu .active.dropdown>a:after{content:"\f106"}
-.nav__menu .dropdown .dropdown>a:after{content:"\f107";font-family:Font Awesome\ 5 Free;font-weight:900;font-size:.875rem;padding-left:5px;color:#7e7e7e}
-.nav__menu .dropdown .active.dropdown>a:after{content:"\f106"}
-.menu-toggle{box-shadow: 5px 5px 50px 10px #3687c8; background-color: #f9f9f9;}
-.menu-toggle{max-height:0;overflow:hidden}
-.menu-toggle,.menu-toggle.active{-webkit-transition:all .4s ease;transition:all .4s ease}
-.menu-toggle.active{max-height:100vh}
-.resize-animation-stopper *{-webkit-transition:none!important;transition:none!important;-webkit-animation:none!important;animation:none!important}
-@media screen and (min-width:800px){
-	.logo_wrap{weight:0; }
-.menu-toggle{max-height:100vh;overflow:visible}
-.nav__container{width:100%;margin:auto;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row;padding:2em 0}
-.nav__container,.nav__mobile{-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between;-webkit-box-align:center;-ms-flex-align:center;align-items:center}
-.nav__mobile .nav__btn{display:none}
-.nav__logo img{width:100%;max-width:58px}
-.nav__menu{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row;max-height:100%;overflow:visible;justify-content: space-around;}
-.nav__menu li{list-style:none;position:relative;white-space:nowrap;padding:1rem}
-.nav__menu li a{font-size:1rem;color:#222;text-decoration:none}
-.nav__menu li a:hover{color:#0062a3}
-.nav__menu .dropdown{position:relative}
-.nav__menu .dropdown ul{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-direction:column;flex-direction:column;position:absolute;top:100%;left:-30px;opacity:0;visibility:hidden;overflow:visible;padding:0 1rem;-webkit-transition:all .4s ease;transition:all .4s ease}
-.nav__menu .dropdown:hover>ul{top:100%;left:0;opacity:1;visibility:visible;overflow:visible;padding:0 1rem}
-.nav__menu .dropdown ul li{padding:.7rem;background-color:#1076c9;position:relative}
-.nav__menu .dropdown ul li:hover{background-color:#3493e0}
-.nav__menu .dropdown ul li a{display:block;color:#fff;}
-.nav__menu .dropdown ul li a:hover{display:block;color:#c7e0f5}
-.nav__menu .dropdown>a:after{content:"\f107"}
-#exception_1:after,#exception_2:after{color:white; content: none;}
-.nav__menu .dropdown:hover>a:after,.nav__menu .dropdown>a:after{font-family:Font Awesome\ 5 Free;font-weight:900;font-size:.875rem;padding-left:5px;color:#7c7c7c}
-.nav__menu .dropdown:hover>a:after{content:"\f106"}.nav__menu .dropdown .dropdown>a:after{content:"\f105"}
-.nav__menu .dropdown .dropdown:hover>a:after,.nav__menu .dropdown .dropdown>a:after{font-family:Font Awesome\ 5 Free;font-weight:900;font-size:.875rem;padding-left:10px;color:#fff}
-.nav__menu .dropdown .dropdown:hover>a:after{content:"\f104"}
-.nav__menu .dropdown .dropdown:hover>ul{position:absolute;top:0;right:calc(100% - 17px);left:auto;opacity:1;visibility:visible}
-.nav__menu .dropdown .dropdown ul{position:absolute;top:0;right:calc(100% - 17px);left:auto;opacity:0;visibility:hidden;-webkit-transition:all .4s ease-in-out;transition:all .4s ease-in-out}}</style>
+
 </head>
 <body>
- <div id="header"></div>
+ <header>
+<div class="nav__container">
+    <div class="nav__mobile">
+      <a class="nav__logo" href="#"></a>
+      <div class="nav__btn">
+        <a aria-label="Mobile menu" class="nav-toggle fade"><span></span><span class="mrg"></span><span class="mrg"></span></a>
+      </div>
+    </div>
+      <nav class="menu-toggle">
+        <ul class="nav__menu">
+          <li class="logo_wrap"><a href="index.html"><img class="school_logo" src="images/School_logo.png" alt="logo"></a></li>
+           <li class="dropdown"><a href="#">Поступление</a>
+            <ul>
+              <li><a href="sections/admission_info.html">Информация</a></li>
+              <li><a href="sections/admission_branches.html">Отделения</a></li>
+              <li><a href="sections/admission_education_programm.html">Учебная программа</a></li>
+	          <li><a href="sections/paid_service.html">Платные услуги</a></li>
+			</ul>
+		   </li>    
+          <li class="dropdown"><a href="#">Обучение</a>
+            <ul>
+              <li><a href="sections/work_schedule.html">График работы</a></li>
+              <li><a href="sections/classes_list.html">Список учебных классов</a></li>
+              <li><a href="sections/schedule.html">Расписание</a></li>
+              <li><a href="sections/students_list.html">Список учащихся</a></li> 
+            </ul>
+          </li>
+           <li class="dropdown"><a href="#">Школа</a>
+            <ul>
+			  <li class="dropdown second-level"><a href="#">Сотрудники школы</a>
+			   <ul>
+			  	  <li><a href="sections/managers.html">Руководители</a></li>
+                  <li><a href="sections/teachers.html">Преподаватели</a></li>
+				  <li><a href="sections/personnel.html">Персонал</a></li>
+			   </ul>
+			  </li>
+              <li class="dropdown second-level"><a href="#">Документы</a>
+			   <ul>
+                  <li><a href="sections/regulations.html">Нормативно-правовые акты</a></li>
+                  <li><a href="sections/local_regulations.html">Локальные акты</a></li>
+               </ul>
+			  </li>
+              <li class="dropdown second-level"><a href="#">Конкурсы</a>
+			   <ul>
+                 <!-- <li><a href="sections/trips.html">Поездки</a></li>-->
+               <!--   <li><a href="sections/awards.html">Награды</a></li>-->
+			   <li><a href="#">Поездки</a></li>
+               <li><a href="#">Награды</a></li>
+               </ul>
+			  </li>	
+			</ul>
+		   </li>
+           <li class="dropdown"><a href="#">Творческая Мастерская</a>
+            <ul>
+              <li><a href="sections/gallery.html">Галерея</a></li>
+             <!-- <li><a href="sections/students_graduate_works.html">Дипломные работы</a></li>-->
+              <!--<li><a href="sections/teachers_works.html">Работы преподавателей</a></li>-->
+			   <li><a href="#">Дипломные работы</a></li>
+              <li><a href="#">Работы преподавателей</a></li>
+			</ul>			
+		   </li>  			
+           <li class="dropdown"><a href="#">История Школы</a> 
+		   <ul>
+		      <li><a href="sections/school_yesterday_today.html">Школа вчера/сегодня</a></li>
+              <li><a href="sections/school_history.html">Наша история</a></li>
+              <li><a href="sections/our_school_graduates.html">Наши выпуски</a></li>
+              <li><a href="sections/directors.html">Директора</a></li>
+			</ul>
+			</li> 
+           <li id="exception_1" class=""><a href="sections/contacts.html">Контакты</a></li>  		   
+        </ul>
+      </nav>
+  </div>
+  <div class=head>
+<span class=school_name>
+   <p>Муниципальное бюджетное образовательное учреждение</p>
+   <p>дополнительного образования</p>
+   <h1>Художественная школа №1</h1>
+   <p>Альметьевского муниципального района</p>
+</span> 
+</div>
+</header>
 
  <div class="poster">
   <h2>Афиша</h2>
@@ -149,7 +177,41 @@
  <!--<p class="link_to_news_archive"><a href="#">Архив новостей  <i class="fa-solid fa-box-archive"></i></a></p>-->
 </div>
 
- <div id="footer"></div>
+ <footer>
+<h4>Мы на других площадках</h4>
+<ul class="footer_info">
+ <li class="f_info">
+  <a href="https://www.gosuslugi.ru/"><img class="footer_logo" src="images/gos.png" alt="logo"></a>
+ </li>
+ <li class="f_info">
+  <a href="https://www.culture.ru/pushkinskaya-karta"><img class="footer_logo" src="images/pushkin-card-desktop-x1.png" alt="logo"></a>
+ </li>
+  <li class="f_info" id="proculture">
+  <a href="https://pro.culture.ru/"><img class="footer_logo" src="images/proculture.png" alt="logo"></a>
+ </li>
+  <li class="f_info">
+  <a href="https://vk.com/"><img class="footer_logo" src="images/vk.png" alt="logo"></a>
+ </li>
+</ul>
+<div class="f_another_info">Информация</div>
+<ul class="f_a">
+  <li class="f_info">
+  <div class="f_header">Контакты</div>
+  <div class="f_text">
+  <p>Приемная: +7(8553) 44-14-25</p>
+  <p>Вахта: +7(8553) 44-14-10</p>
+  <p>E-mail: pavel.drozdov@list.ru</p>
+  <p>Адрес:423450,РТ,г.Альметьевск,ул.Мусы Джалиля, д.9 </p>
+  </div>
+ </li>
+ <li>
+  <p>Муниципальное бюджетное образовательное учреждение </P>
+  <p>дополнительного образования "Детская художественная школа № 1" </p>
+  <p>Альметьевского муниципального района Республики Татарстан.</p>
+  <p>Адресс: 423450, РТ, г.Альметьевск, ул. Мусы Джалиля, д.9</p>
+ </li>
+</ul>
+</footer>
 
 <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
 <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.2.slim.min.js"></script> 
@@ -170,71 +232,4 @@
     };
   }}
 };</script>
-<script>
-! function(e) {
-    var t = {};
-
-    function n(o) {
-        if (t[o]) return t[o].exports;
-        var r = t[o] = {
-            i: o,
-            l: !1,
-            exports: {}
-        };
-        return e[o].call(r.exports, r, r.exports, n), r.l = !0, r.exports
-    }
-    n.m = e, n.c = t, n.d = function(e, t, o) {
-        n.o(e, t) || Object.defineProperty(e, t, {
-            enumerable: !0,
-            get: o
-        })
-    }, n.r = function(e) {
-        "undefined" != typeof Symbol && Symbol.toStringTag && Object.defineProperty(e, Symbol.toStringTag, {
-            value: "Module"
-        }), Object.defineProperty(e, "__esModule", {
-            value: !0
-        })
-    }, n.t = function(e, t) {
-        if (1 & t && (e = n(e)), 8 & t) return e;
-        if (4 & t && "object" == typeof e && e && e.__esModule) return e;
-        var o = Object.create(null);
-        if (n.r(o), Object.defineProperty(o, "default", {
-                enumerable: !0,
-                value: e
-            }), 2 & t && "string" != typeof e)
-            for (var r in e) n.d(o, r, function(t) {
-                return e[t]
-            }.bind(null, r));
-        return o
-    }, n.n = function(e) {
-        var t = e && e.__esModule ? function() {
-            return e.default
-        } : function() {
-            return e
-        };
-        return n.d(t, "a", t), t
-    }, n.o = function(e, t) {
-        return Object.prototype.hasOwnProperty.call(e, t)
-    }, n.p = "", n(n.s = 0)
-}([function(e, t, n) {
-    "use strict";
-    n.r(t);
-    var o;
-    n(1);
-    window.addEventListener("resize", (function() {
-        document.body.classList.add("resize-animation-stopper"), clearTimeout(o), o = setTimeout((function() {
-            document.body.classList.remove("resize-animation-stopper")
-        }), 400)
-    }));
-    var r = document.querySelector(".nav-toggle"),
-        i = document.querySelector(".menu-toggle");
-    r.addEventListener("click", (function(e) {
-        this.classList.toggle("open"), i.classList.toggle("active"), e.stopPropagation()
-    })), document.querySelector(".dropdown a").addEventListener("click", (function(e) {
-        this.nextElementSibling.classList.toggle("show"), this.parentNode.classList.toggle("active"), e.stopPropagation()
-    })), document.querySelector(".second-level a").addEventListener("click", (function(e) {
-        this.nextElementSibling.classList.toggle("show"), this.parentNode.classList.toggle("active"), e.stopPropagation()
-    }))
-}, function(e, t, n) {}]);
-</script>
 </body>
