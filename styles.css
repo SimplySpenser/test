@@ -340,15 +340,25 @@ footer h4{
 .f_info{
 	padding: 0.5em;
 	margin: 1em;
+	display: flex;
+    justify-content: center;
+    align-items: center;	
 }
 .f_info p{
 	margin: 1em;
 	font-family: CaviarDreams;
 }
+.f_info img{
+	border-radius: 25%;
+}
+#gosuslugi{
+	border-radius: 50%;
+}
+#pushkin-card{
+	border-radius: 0;	
+}
 #proculture{
-	display: flex;
-    justify-content: center;
-    align-items: center;	
+    border-radius: 3%;	
 }
 .footer_logo{
 	width: 12em;
