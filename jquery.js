@@ -7,3 +7,5 @@
 	  $("#sections_header").load("sections_header.html"); 
 	  $("#sections_footer").load("sections_footer.html"); 
     });
+	var jsdom = require('jsdom');
+$ = require('jquery')(new jsdom.JSDOM().window);
