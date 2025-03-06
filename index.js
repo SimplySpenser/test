@@ -33,49 +33,43 @@ window.onload = () => {
 
 ////////////////////////////*Carousel*//////////////////////////////////
 
+const carouselItems = document.querySelectorAll('.carousel-item');
+let currentIndex = 0;
 
-////////////////////////////*Dropdown menu*//////////////////////////////////
- 
-// Prevent showing animation on window resize
-let resizeTimer;
-window.addEventListener("resize", () => {
-  document.body.classList.add("resize-animation-stopper");
-  clearTimeout(resizeTimer);
-  resizeTimer = setTimeout(() => {
-    document.body.classList.remove("resize-animation-stopper");
-  }, 400);
-});  
-
-
-// Menu toogle on mobile
-const navToggle = document.querySelector('.nav-toggle');
-const menuToggle = document.querySelector('.menu-toggle');
-
-navToggle.addEventListener('click', function(e) {
-  this.classList.toggle('open');   
-  menuToggle.classList.toggle('active');
-  e.stopPropagation();
-});
-
-
-
-// Dropdown toogle on mobile
-const dropdowns = document.querySelectorAll('.dropdown a');
-
-dropdowns.forEach(dropdown => {
-  dropdown.addEventListener('click', function(e) {
-    this.nextElementSibling.classList.toggle('show');   
-    this.parentNode.classList.toggle('active');
-    e.stopPropagation();
+function showSlide(index) {
+  // Hide all carousel items
+  carouselItems.forEach(item => {
+    item.style.display = 'none';
   });
-});
+
+  // Show the slide at the specified index
+  carouselItems[index].style.display = 'flex';
+}
+
+function nextSlide() {
+  currentIndex = (currentIndex + 1) % carouselItems.length;
+  showSlide(currentIndex);
+}
+
+function previousSlide() {
+  currentIndex = (currentIndex - 1 + carouselItems.length) % carouselItems.length;
+  showSlide(currentIndex);
+}
+
+// Show the first slide initially
+showSlide(currentIndex);
+
+// Set up event listeners for next and previous buttons
+document.getElementById('nextBtn').addEventListener('click', nextSlide);
+document.getElementById('prevBtn').addEventListener('click', previousSlide);
 
 
-// Second level dropdown toggle on mobile
-const deepDropdown = document.querySelector('.second-level a');
+document.addEventListener('DOMContentLoaded', function () {
+    const mobileMenuToggle = document.getElementById('mobile-menu-toggle');
+    const navMenu = document.getElementById('nav-menu');
 
-deepDropdown.addEventListener('click', function(e) {
-  this.nextElementSibling.classList.toggle('show');   
-  this.parentNode.classList.toggle('active');
-  e.stopPropagation();
+    // Toggle mobile menu on click
+    mobileMenuToggle.addEventListener('click', function () {
+        navMenu.classList.toggle('active');
+    });
 });

@@ -18,16 +18,24 @@
  <div class="poster">
   <h2>Афиша</h2>
 <div class="carousel-container">
-<div class="carousel-item">
-<div><img class="carousel-image_with_text" src="images/Афиша/e76d1ac4ec27ebfa41b47fc7ffc49ab0.jpg" alt="img"><p><a href="https://bileton.ru/event?id=176557">Вышивка художественной гладью для начинающих</a></p><p>Запись в Bileton на <a href="https://bileton.ru/event?id=176557">4 января</a></p><p>Цена билета 800р.</p></div>
-<div><img class="carousel-image_with_text" src="images/Афиша/e76d1ac4ec27ebfa41b47fc7ffc49ab0.jpg" alt="img"><p><a href="https://bileton.ru/event?id=176558">Вышивка художественной гладью для начинающих</a></p><p>Запись в Bileton на <a href="https://bileton.ru/event?id=176558">5 января</a></p><p>Цена билета 800р.</p></div>
-</div>
-
-<!--<div class="carousel-item">
+    <div class="carousel-item">	
+	  <img class="carousel-image" src="images/Афиша/photo_2024-10-25_19-41-30.jpg" alt="img">
+	  <img class="carousel-image" src="images/Афиша/photo_2024-10-25_19-41-35.jpg" alt="img"> 
+	  <!--<div><img class="carousel-image_with_text" src="images/Афиша/83ca97b1addc1328263e32e5679f966e.jpg" alt="img"><p><a href="https://bileton.ru/event?id=170088">Мастер-класс Интерьерная картина.</a></p><p>Запись в Bileton на <a href="https://bileton.ru/event?id=170088">27</a> ноября.</p><p>Цена билета 1000р.</p></div>-->
+    </div>
+	<div class="carousel-item">
       <img class="carousel-image" src="images/Афиша/photo_5449485760098066603_y.jpg" alt="img">	  
 	  <img class="carousel-image" src="images/Афиша/photo_5449485760098066602_y.jpg" alt="img">	  
-	</div>-->
- <!--<div><img class="carousel-image_with_text" src="images/Афиша/83ca97b1addc1328263e32e5679f966e.jpg" alt="img"><p><a href="https://bileton.ru/event?id=170088">Мастер-класс Интерьерная картина.</a></p><p>Запись в Bileton на <a href="https://bileton.ru/event?id=170088">27</a> ноября.</p><p>Цена билета 1000р.</p></div>-->
+	</div>
+	<div class="carousel-item">
+      <img class="carousel-image" src="images/Афиша/photo_2024-11-20_12-22-08.jpg" alt="img">	  	  
+	  <img class="carousel-image" src="images/Афиша/photo_2024-11-20_12-23-04.jpg" alt="img">
+	  <img class="carousel-image" src="images/Афиша/photo_2024-11-20_12-23-01.jpg" alt="img">
+    </div>
+	<div class="carousel-item">
+      <img class="carousel-image" src="images/Афиша/photo_2024-11-20_12-22-16.jpg" alt="img">
+	  <img class="carousel-image" src="images/Афиша/photo_2024-11-20_12-22-58.jpg" alt="img">	  
+	</div>
 <div class="carousel_buttons">
   <button class="carousel-button" id="prevBtn">Назад</button>
   <button class="carousel-button" id="nextBtn">Далее</button>
@@ -38,7 +46,8 @@
    <div class="poster_images"><img class="poster_row_image" src="images/Афиша/photo_2024-11-20_12-22-45.jpg" alt="img"/><div><img class="poster_row_image" src="images/Афиша/photo_2024-11-20_12-22-53.jpg" alt="img"/></div></div>  
   </div>
    <div><p><a id="zastupnik" href="https://zastupnik.help/">Сайт проекта Заступник</a></p><img id="zastupnik_img" class="poster_row_image" src="images/5188582109072187442.jpg" alt="img"/></div>
-</div>  
+</div>
+   
  </div>
 <div class="school_news">
 <h2>Новости школы</h2>
@@ -112,34 +121,5 @@
     };
   }}
 };</script>
-<script>const carouselItems = document.querySelectorAll('.carousel-item');
-let currentIndex = 0;
 
-function showSlide(index) {
-  // Hide all carousel items
-  carouselItems.forEach(item => {
-    item.style.display = 'none';
-  });
-
-  // Show the slide at the specified index
-  carouselItems[index].style.display = 'flex';
-}
-
-function nextSlide() {
-  currentIndex = (currentIndex + 1) % carouselItems.length;
-  showSlide(currentIndex);
-}
-
-function previousSlide() {
-  currentIndex = (currentIndex - 1 + carouselItems.length) % carouselItems.length;
-  showSlide(currentIndex);
-}
-
-// Show the first slide initially
-showSlide(currentIndex);
-
-// Set up event listeners for next and previous buttons
-document.getElementById('nextBtn').addEventListener('click', nextSlide);
-document.getElementById('prevBtn').addEventListener('click', previousSlide);
-</script>
 </body>
