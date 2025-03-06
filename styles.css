@@ -5,78 +5,7 @@
   box-sizing: border-box;
 }
 .h1.h2.h3.h4.h5{font-family:CaviarDreams;}
-body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-}
 
-.nav__container {
-    background-color: #333;
-    color: white;
-}
-
-.nav__mobile {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px;
-}
-
-.nav__logo {
-    /* Add logo styles */
-}
-
-.nav__btn {
-    cursor: pointer;
-}
-
-.menu-toggle {
-    display: none; /* Hide the menu by default */
-}
-
-.nav__menu {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-.nav__menu li {
-    position: relative;
-}
-
-.nav__menu li a {
-    color: white;
-    padding: 10px 20px;
-    display: block;
-    text-decoration: none;
-}
-
-.dropdown ul {
-    display: none; /* Hide dropdowns initially */
-    position: absolute;
-    background-color: #444;
-    z-index: 1;
-}
-
-.dropdown:hover ul {
-    display: block; /* Show dropdown on hover */
-}
-
-/* Mobile styles */
-@media (max-width: 768px) {
-    .menu-toggle {
-        display: block; /* Show the menu toggle button */
-    }
-
-    .nav__menu {
-        display: none; /* Hide menu by default on mobile */
-        flex-direction: column;
-    }
-
-    .nav__menu.active {
-        display: flex; /* Show menu when active */
-    }
-}
 /*================Main page====================*/
  header{
 	background-image: url("images/Alm_school.jpeg");
@@ -112,10 +41,10 @@ body {
 /*================Dropdown nav menu====================*/
 *,:after,:before{-webkit-box-sizing:inherit;box-sizing:inherit;}
 .logo_wrap{position:absolute;}
-.school_logo{width: 10em;
+.school_logo{width: 6em;
 border-radius: 100px;
 position: relative;
-top: -2.5em;
+top: -0.5em;
 z-index: 5;
 box-shadow: 5px 5px 50px 10px #0b4370;
 transition: transform .5s, filter .5s;
@@ -123,13 +52,16 @@ transition: transform .5s, filter .5s;
 .school_logo:hover {
 	transform: scale(1.05);
 }
+.nav__menu{
+	padding-left: 5px;
+}
+.dropdown{color:#1076c9;}
 .nav__container{-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-direction:column;flex-direction:column;-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between;-webkit-box-align:stretch;-ms-flex-align:stretch;align-items:stretch;padding:20px;position:relative;z-index:5;}
 .nav__mobile .nav__btn{display:block}
 .nav__mobile{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between;-webkit-box-align:center;-ms-flex-align:center;align-items:center}
 .nav__logo{font-size:1.4rem;font-weight:700;color:#555}
 .nav__menu{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-direction:column;flex-direction:column;overflow:hidden}
 .showing{max-height:37rem;-webkit-transition:all .5s;transition:all .5s}
-.nav__menu{height:3em;}
 .nav__menu li{list-style:none;position:relative;white-space:nowrap;padding:1rem 0 0}
 .nav__menu li a{display:block;font-size:1rem;color:#222;text-decoration:none}
 .nav-toggle{display:block;background-color:transparent;width:40px;cursor:pointer;padding:4px}
@@ -152,7 +84,16 @@ transition: transform .5s, filter .5s;
 .menu-toggle.active{max-height:100vh}
 .resize-animation-stopper *{-webkit-transition:none!important;transition:none!important;-webkit-animation:none!important;animation:none!important}
 @media screen and (min-width:800px){
-	.logo_wrap{weight:0; }
+.school_logo{width: 10em;
+border-radius: 100px;
+position: relative;
+top: -2.5em;
+z-index: 5;
+box-shadow: 5px 5px 50px 10px #0b4370;
+transition: transform .5s, filter .5s;
+}
+.logo_wrap{weight:0;}
+.nav__menu{height:3em;}
 .menu-toggle{max-height:100vh;overflow:visible}
 .nav__container{width:100%;margin:auto;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row;padding:2em 0}
 .nav__container,.nav__mobile{-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between;-webkit-box-align:center;-ms-flex-align:center;align-items:center}
@@ -193,12 +134,7 @@ transition: transform .5s, filter .5s;
 	color: #362491;
 	font-family: NimbusSanLCY;	
 }
-.poster_row{
-	display: flex;
-	flex-direction: row;
-	justify-content: space-around;
-	flex-wrap: wrap;
-	padding: 0.5em 0.5em 2em;
+.poster_row_wrapper{
 	border: 10px solid;
     margin: 2em;
     border-top-color: #06c;
@@ -207,9 +143,31 @@ transition: transform .5s, filter .5s;
     border-bottom-color: #0c5a99;
     border-radius: 4px;
 }
-.poster_images{
+.poster_row{
 	display: flex;
-    flex-direction: row;
+	flex-direction: row;
+	justify-content: space-around;
+	flex-wrap: wrap;
+	padding: 0.5em 0.5em 2em;
+}
+#digital_security{
+	font-size: 1.3em;
+}
+.poster_survey{
+	
+}
+.poster_survey a{
+  text-align: center;
+  padding: 0.5em;
+  font-size: 1.6em;
+  color: #0066cc;
+  display: block;
+}
+.poster_survey div{
+  font-size: 14px;
+  border: 1px solid blue;
+  max-width: 30em;
+  box-shadow: 10px 5px 20px 6px #0b4370;
 }
 .poster_row_image{
 	height: 32em;
@@ -225,7 +183,7 @@ transition: transform .5s, filter .5s;
 }
 .poster p{
     text-align: center;
-    padding: 0.5em;
+    padding: 0.8em 0 0.1em 0;
     font-size: 1.6em;
     color: #0066cc;
     font-family: NimbusSanLCY;
@@ -238,7 +196,7 @@ transition: transform .5s, filter .5s;
 .carousel-item {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: space-around;
   flex-wrap: wrap;
   padding: 0.5em 0.5em 2em;
   margin: 1em auto;
@@ -248,7 +206,7 @@ transition: transform .5s, filter .5s;
   display: block;
   border: 1px solid #1076c9;
   box-shadow: 10px 5px 20px 6px #0b4370;
-  margin: 1.2em auto 0.5em;
+  margin: 1.2em;
   transition: transform .5s, filter .5s;
 }
 .carousel-image_with_text{
@@ -1106,6 +1064,10 @@ width: 56em;
 	margin: 3em auto;
 	border-radius: 6px;
 	transition: transform .5s, filter .5s;
+}
+#sparrow{
+	max-width: 60%;
+	margin-bottom: 1em;
 }
 .news_segment_image{
 	border: 1px solid #1076c9;
