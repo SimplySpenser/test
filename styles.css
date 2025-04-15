@@ -63,7 +63,7 @@
 	color: #362491;
 }
 .school_name{
-    font-size: 1.3em;
+    font-size: 1.2em;
 }
 .school_name h1,p{
 	font-family: JakobXTT;
@@ -313,6 +313,7 @@ transition: transform .5s, filter .5s;
 .poster{
 	width: 92%;
 	margin: 1em auto;
+	margin-top: 8em;
 }
 .poster h2{
 	font-size: 2em;
@@ -477,7 +478,7 @@ transition: transform .5s, filter .5s;
 	padding-bottom: 0;
 }
 .fresh_news img{
-	max-width: 100%;
+	max-width: 92%;
     height: 16em;
 	margin: 0.5em auto 0.5em;
 }
