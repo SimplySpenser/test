@@ -94,9 +94,9 @@ transition: transform .5s, filter .5s;
 	padding-left: 5px;
 }
 .dropdown{color:#1076c9;}
-.nav__container{-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-direction:column;flex-direction:column;-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between;-webkit-box-align:stretch;-ms-flex-align:stretch;align-items:stretch;padding:20px;position:relative;z-index:5;background-color: #6899be;}
+.nav__container{-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-direction:column;flex-direction:column;-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between;-webkit-box-align:stretch;-ms-flex-align:stretch;align-items:stretch;padding:20px;position:relative;z-index:5;}
 .nav__mobile .nav__btn{display:block}
-.nav__mobile{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between;-webkit-box-align:center;-ms-flex-align:center;align-items:center}
+.nav__mobile{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between;-webkit-box-align:center;-ms-flex-align:center;align-items:center;}
 .nav__logo{font-size:1.4rem;font-weight:700;color:#555}
 .nav__menu{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-direction:column;flex-direction:column;overflow:hidden}
 .showing{max-height:37rem;-webkit-transition:all .5s;transition:all .5s}
@@ -233,7 +233,6 @@ transition: transform .5s, filter .5s;
 }
 .poster p{
     text-align: center;
-    padding: 0.8em 0 0.1em 0;
     font-size: 1.6em;
     color: #0066cc;
     font-family: NimbusSanLCY;
@@ -309,6 +308,56 @@ transition: transform .5s, filter .5s;
   background-color: #3e8e41;
   box-shadow: 0 5px #666;
   transform: translateY(4px);
+}
+@media screen and (max-width:800px){
+.poster{
+	width: 92%;
+	margin: 1em auto;
+}
+.poster h2{
+	font-size: 2em;
+}
+.carousel-item {
+    padding: 0;
+    margin: 0.1em auto;
+}
+.carousel-item p{
+    font-size: 1.1em;
+}
+.carousel-image {
+    height: 21em;
+}
+.carousel-image_with_text{
+    height: 12em;
+	margin: 1em;
+}
+.carousel_buttons{
+    margin: 0;
+}
+.carousel-button {
+    margin-top: 0;
+    padding: 0.7em 1.8em;
+    font-size: 16px;
+}
+.poster_row_image{
+	height: 17em;
+	margin: 0.3em auto 0.4em;
+	padding: 0;
+}
+.poster_admissions{
+	margin-bottom: 0.5em;
+}
+.poster p{
+    font-size: 1em;
+    padding: 0.2em;
+}
+.poster_survey a{
+    font-size: 1.2em;
+}
+.poster_survey div{
+    font-size: 0.9em;
+    margin-bottom: 0.5em;
+}
 }
 /*================News====================*/
 .school_news{
@@ -412,7 +461,38 @@ transition: transform .5s, filter .5s;
 		font-size: larger;
 	}
 }
-
+@media screen and (max-width:800px){
+.school_news{
+	width: 92%;
+	margin: 1em auto;
+}
+.school_news h2{
+    font-size: 1.5em;
+}
+.news{
+	padding: 0;
+}
+.fresh_news{
+    flex-basis: 100%;
+	padding-bottom: 0;
+}
+.fresh_news img{
+	max-width: 100%;
+    height: 16em;
+	margin: 0.5em auto 0.5em;
+}
+.school_news h3{
+	font-size: 1.2em;
+}
+.fresh_news p{
+	margin-bottom: 0.5em;
+    font-size: 1em;
+    padding: 0.5em;
+}
+.readmore{
+	padding-right: 0.5em;
+}
+}
 /*================Footer====================*/
 footer{
 	background-color: #333333;
