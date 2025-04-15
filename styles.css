@@ -7,14 +7,18 @@
 .h1.h2.h3.h4.h5{font-family:CaviarDreams;}
 
 /*================Main page====================*/
+
  header{
-	background-image: url("images/Alm_school.jpeg");
+	z-index: 5;
     background-size: cover;
-	opacity: 80%;
-	height: 60em;
-	padding-top: 1em;
-	border-bottom: 2px solid #1076c9;
+	opacity: 80%;	
+	padding-top: 1em;	
 	position: relative;
+}
+#main_header{
+	background-image: url("images/Alm_school.jpeg");
+	height: 60em;
+	border-bottom: 2px solid #1076c9;
 }
 .head{
     position: absolute;
@@ -38,6 +42,40 @@
 .head_info{
     text-align: center;
 }
+@media screen and (max-width:800px){
+	 header{
+	z-index: 5;
+    background-size: cover;
+	opacity: 80%;	
+	padding-top: 1em;	
+	position: relative;
+}
+#main_header{
+	background-image: none;
+	height: 14em;
+	border-bottom: none;
+}
+.head{
+    position: absolute;
+    right: 5%;
+    top: 43%;
+	margin: 0 1.5em;
+	color: #362491;
+}
+.school_name{
+    font-size: 1.3em;
+}
+.school_name h1,p{
+	font-family: JakobXTT;
+}
+.head_info_wrap{
+	display: flex;
+	justify-content: space-around;
+}
+.head_info{
+    text-align: center;
+}
+}
 /*================Dropdown nav menu====================*/
 *,:after,:before{-webkit-box-sizing:inherit;box-sizing:inherit;}
 .logo_wrap{position:absolute;}
@@ -56,7 +94,7 @@ transition: transform .5s, filter .5s;
 	padding-left: 5px;
 }
 .dropdown{color:#1076c9;}
-.nav__container{-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-direction:column;flex-direction:column;-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between;-webkit-box-align:stretch;-ms-flex-align:stretch;align-items:stretch;padding:20px;position:relative;z-index:5;}
+.nav__container{-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-direction:column;flex-direction:column;-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between;-webkit-box-align:stretch;-ms-flex-align:stretch;align-items:stretch;padding:20px;position:relative;z-index:5;background-color: #6899be;}
 .nav__mobile .nav__btn{display:block}
 .nav__mobile{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between;-webkit-box-align:center;-ms-flex-align:center;align-items:center}
 .nav__logo{font-size:1.4rem;font-weight:700;color:#555}
@@ -156,6 +194,18 @@ transition: transform .5s, filter .5s;
 .poster_survey{
 	
 }
+.poster_admissions div{
+  font-size: 14px;
+  border: 1px solid blue;
+  max-width: 30em;
+  box-shadow: 10px 5px 20px 6px #0b4370;
+}
+.poster_admissions a{
+  text-align: center;
+  font-size: 1.6em;
+  color: #0066cc;
+  display: block;	
+}
 .poster_survey a{
   text-align: center;
   padding: 0.5em;
@@ -187,6 +237,7 @@ transition: transform .5s, filter .5s;
     font-size: 1.6em;
     color: #0066cc;
     font-family: NimbusSanLCY;
+	padding: 0.5em;
 }
 .carousel-container {
   width: 100%;
@@ -380,17 +431,11 @@ footer h4{
 .footer_info{
 	display: flex;
 	justify-content: space-around;
+	align-items: center;
 	list-style: none;
 }
 .f_text{
 	font-family: CaviarDreams;
-}
-.f_info{
-	padding: 0.5em;
-	margin: 1em;
-	display: flex;
-    justify-content: center;
-    align-items: center;	
 }
 .f_info p{
 	margin: 1em;
@@ -414,7 +459,7 @@ footer h4{
 .f_another_info{
 	text-align: center;
 	font-weight: 600;
-	padding: 1.5em;
+	padding-top: 1.5em;
 	font-family: AvanteTck;
 	font-size: 18px;
 }
@@ -427,6 +472,23 @@ footer h4{
 	text-align: center;
 	margin-top:10px;
 	font-family: CaviarDreams;
+}
+@media screen and (max-width:800px){
+.footer_info{
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.f_info{
+	padding: 0.2em;
+	margin: 0.2em;
+}
+.footer_logo {
+  width: 8em;
+}
+.f_a{
+	flex-direction: column;
+	padding: 1em;
+}
 }
 
 /*================admission_info====================*/
@@ -684,7 +746,7 @@ footer h4{
 .gallery__item--28 {
     grid-column: 2 / span 2;
     grid-row: 20 / span 1;
-    }	
+    }
 .gallery__link {
     position: relative;
     display: block;
@@ -843,9 +905,15 @@ footer h4{
 }
 .st_gr_image img:hover {
     filter: brightness(50%);
+	transform: scale(1.1);
+	position: relative;
 }
 .st_gr_image:hover .st_gr_text {
     opacity: 1;
+}
+.st_gr_image img:fullscreen {
+	object-fit: contain;
+	filter: none;
 }
 /*================students_graduate_works_years====================*/
 
@@ -1065,10 +1133,6 @@ width: 56em;
 	border-radius: 6px;
 	transition: transform .5s, filter .5s;
 }
-#sparrow{
-	max-width: 60%;
-	margin-bottom: 1em;
-}
 .news_segment_image{
 	border: 1px solid #1076c9;
     box-shadow: 1px 1px 6px 2px #0b4370;
@@ -1081,6 +1145,21 @@ width: 56em;
 	cursor: pointer;
 }
 .news_segment_image:fullscreen{
+	object-fit: contain;
+}
+.news_segment_image_wide{
+	border: 1px solid #1076c9;
+    box-shadow: 1px 1px 6px 2px #0b4370;
+	max-width: 60%;
+    max-height: 50em;
+	transition: transform .5s, filter .5s;	
+	margin-bottom: 1em;
+}
+.news_segment_image_wide:hover{
+	transform: scale(1.05);	
+	cursor: pointer;
+}
+.news_segment_image_wide:fullscreen{
 	object-fit: contain;
 }
 .news_segment{
